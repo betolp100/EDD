@@ -2,8 +2,8 @@
 //
 
 #include "stdafx.h"
-#include "iostream"
-#include "string"
+#include <iostream>
+#include <string>
 
 
 int x, y, z;
