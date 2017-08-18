@@ -11,6 +11,7 @@ public class EDMLárragaPA03
         Scanner entrada = new Scanner(System.in);
         tamaño=entrada.nextInt();
         int[] vector= new int[tamaño];
+        int[] vector2= new int[tamaño];
         for(int i=0;i<vector.length;i++)
             {
                 System.out.println("Dame el valor de la posición [ "+(i+1)+" ]:" );
@@ -23,7 +24,8 @@ public class EDMLárragaPA03
         Secuencial sec= new Secuencial();
         
         pos1=sec.fetch(vector, n);
-        pos2=bin.fetch(vector, n);
+        vector2=bin.seleccion(vector);
+        pos2=bin.fetch(vector2, n);
         
         System.out.println("================================================================");
         if((pos1==-1)&&(pos2==-1))
@@ -34,7 +36,7 @@ public class EDMLárragaPA03
                     System.out.println("El vector tiene "+vector.length+ " números.");
                     System.out.println("El número buscado: "+n+", se encuentra en la posición "+pos1+".");
                     System.out.print("\n\n\n");
-                    System.out.println("(Está línea de código es tan sólo para verificar si ambos buscadores funcionan correctamente).\nLa busqueda por binario encuentra el número en la posición "+pos2+"\ny por binario está en la posicción "+pos2);
+                    System.out.println("(Está línea de código es tan sólo para verificar si ambos buscadores funcionan correctamente).\nLa busqueda por binario encuentra el número en la posición "+pos2+"\ny por secuencial está en la posicción "+pos1);
         }
     }
 }
