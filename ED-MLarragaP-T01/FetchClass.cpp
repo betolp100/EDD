@@ -12,17 +12,17 @@ FetchClass::FetchClass()
 {
 }
 
-void FetchClass::setArray(int a[])
+void FetchClass:: setArray(int a[])
 {
 	myArray = a;
 }
 
-int* FetchClass::getArray()
+int* FetchClass:: getArray()
 {
 	return myArray;
 }
 
-int* FetchClass::RandArray(int size)//Make an array with random values per position.
+int* FetchClass:: RandArray(int size)//Make an array with random values per position.
 {
 	int *random = new int[size];
 	cout << "The array has been randomized" << endl;
@@ -36,7 +36,7 @@ int* FetchClass::RandArray(int size)//Make an array with random values per posit
 }
 
 
-void FetchClass::showArray() //Prints myArray's contents.
+void FetchClass:: showArray() //Prints myArray's array.
 {
 	for (int i = 0; i < sizeof(myArray); i++)
 	{
@@ -45,7 +45,7 @@ void FetchClass::showArray() //Prints myArray's contents.
 	cout << "." << endl;
 }
 
-void FetchClass::showFetch(int position) //Prints the position of a found value.
+void FetchClass:: showFetch(int position) //Prints the position in the array in case that exists.
 {
 	if (position != -1)
 	{
@@ -57,8 +57,7 @@ void FetchClass::showFetch(int position) //Prints the position of a found value.
 	}
 }
 
-void FetchClass::showArray(int  a[]) //Prints some array contents.
-{
+void FetchClass:: showArray(int  a[]) 
 	for (int i = 0; i < sizeof(a); i++)
 	{
 		cout << "[" << a[i] << "]";
