@@ -10,19 +10,19 @@ SecClass::SecClass()
 }
 
 
-int SecClass::sFetch(int e) //Receives the item to find
+int SecClass::sFetch(int e) 
 {
-	return sFetch(myArray, e); //Utilizes the other function using the implicit predefined array
+	return sFetch(myArray, e); 
 }
 
-int SecClass::sFetch(int  a[], int e) //Receives the item to find and an array.
+int SecClass::sFetch(int  a[], int e)
 {
-	for (int i = 0; i < sizeof(a); i++) //Searches manually through all of the items in the vector
+	for (int i = 0; i < sizeof(a); i++)
 	{
-		if (a[i] == e) //until one of them matches the item its searching.
+		if (a[i] == e) 
 		{
-			return i; //Returns the position
+			return i; //Returns the exact position where was found the number.
 		}
 	}
-	return -1; //Returns -1 to indicate it wasn't found.
+	return -1; //In case that the number does not exist, it returns nothing.
 };
