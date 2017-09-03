@@ -70,7 +70,6 @@ void SortClass::quickSort(int  a[], int inti, int intf) //QUICKSORT
 	pivot = a[inti];
 	do
 	{
-		//Moves throughout the vector comparing the values with the pivot, moving one by one, forwards or backwards
 		while (a[i] <= pivot && i<j)
 		{
 			i++;
@@ -90,7 +89,6 @@ void SortClass::quickSort(int  a[], int inti, int intf) //QUICKSORT
 	a[inti] = a[j];
 	a[j] = pivot;
 
-	//Uses recursivity to sort all of the values set by set
 	if (inti<j - 1)
 	{
 		quickSort(a, inti, j - 1);
@@ -101,9 +99,8 @@ void SortClass::quickSort(int  a[], int inti, int intf) //QUICKSORT
 	}
 }
 
-void SortClass::mergeSort(int  a[], int ini, int fin) //Sorts the values in an array using the mergesort algorithm
-{
-	if (fin - ini == 0 || fin - ini == 1) //if the current evaluated list is of size 0 or 1, it means its already sorted.
+void SortClass::mergeSort(int  a[], int ini, int fin) //MERGESORT
+	if (fin - ini == 0 || fin - ini == 1)
 	{
 
 	}
@@ -115,10 +112,8 @@ void SortClass::mergeSort(int  a[], int ini, int fin) //Sorts the values in an a
 		int p1 = ini;
 		int p2 = pivot;
 		int p3 = 0;
-		//an auxiliary array is created to save the in-order lists.
 		int size = fin - ini;
 		int *atemp = new int[size];
-		//Moves throughout the pivots and points, while checking the value of each point.
 		while (p1<pivot || p2<fin)
 		{
 			if (p1<pivot && p2<fin)
