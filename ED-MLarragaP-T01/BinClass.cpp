@@ -60,8 +60,8 @@ int BinClass::bFetch(int a[], int e)
 
 	while (sta < end)
 	{
-		midValue = a[mid]; //Gets the current value of the center of the vector
-		if (midValue == e) //Checks if
+		midValue = a[mid];
+		if (midValue == e) 
 		{
 			return mid;
 		}
